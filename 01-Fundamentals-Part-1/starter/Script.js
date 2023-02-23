@@ -285,3 +285,20 @@ if (dolphinsScore > koalasScore && dolphinsScore >= 100) {
 }
 
 //////////////////////////////////////
+//Switch statement
+
+const day = "monday";
+
+switch (day) {
+  case "monday":
+    console.log("Plan on monday");
+    break;
+
+  case "tuesday":
+    console.log("Drink beer");
+    break;
+
+  case "wednesday":
+    console.log("Write a code");
+    break;
+}
