@@ -107,3 +107,20 @@ const checkWinner = function (avgDolhins, avgKoalas) {
   }
 };
 checkWinner(scoreDolphins, scoreKoalas);
+
+//Introduction to Arrays
+const friends = ["micheal", "steven", "bob", "Jonas"];
+console.log(friends);
+
+const years = new Array(1991, 1992, 200, 2010);
+console.log(friends[0]);
+console.log(friends[2]);
+
+console.log(friends.length);
+console.log(friends.length - 1);
+
+friends[2] = "Arun";
+console.log(friends);
+
+friends[3] = "Adiah";
+console.log(friends);
