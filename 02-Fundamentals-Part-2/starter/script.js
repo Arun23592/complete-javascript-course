@@ -124,3 +124,71 @@ console.log(friends);
 
 friends[3] = "Adiah";
 console.log(friends);
+
+const firstname = "Arun";
+const arun = [firstname, "subramani", 2037 - 1992, "teacher", friends];
+console.log(arun);
+console.log(arun.length);
+
+//Excercise
+const calcAge = function (birthYears) {
+  return 2037 - birthYears;
+};
+const years1 = [1990, 1967, 2007, 2010, 2018];
+const agee1 = calcAge(years1[0]);
+const agee2 = calcAge(years1[1]);
+const agee3 = calcAge(years1[years.length - 1]);
+console.log(agee1, agee2, agee3);
+
+const ages = [calcAge(years[0]), calcAge(years[1])];
+calcAge(years[years.length - 1]);
+console.log(ages);
+
+//Add Methods
+const friends1 = ["micheal", "steven", "bob", "Jonas", "Peter"];
+const newLength = friends1.push("Jay");
+console.log(friends1);
+console.log(newLength);
+
+friends1.unshift("John");
+console.log(friends1);
+
+//Remove elements
+friends1.pop();
+const popped = friends1.pop();
+console.log(friends1);
+console.log(popped);
+
+friends1.shift();
+console.log(friends1);
+
+console.log(friends1.indexOf("steven"));
+console.log(friends1.indexOf("bob"));
+
+friends1.push(23);
+console.log(friends1.includes("steven"));
+console.log(friends1.includes("bob"));
+console.log(friends1.includes("23"));
+
+if (friends1.includes("steven")) {
+  console.log("You hve a friend called steven");
+}
+
+//coding challenge #2
+const calcTip = function (bill) {
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+};
+
+const bills = [125, 555, 44];
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+
+//Introrduction objects
+
+const jonasArray = ["jons", "arun", 2037 - 1992, ["michel", "arun", "bob"]];
+
+const jonasArray1 = {
+  firstName: "jons",
+  lastName: "arun",
+  age: 2037 - 1992,
+  friends: ["michel", "arun", "bob"],
+};
