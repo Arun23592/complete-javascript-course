@@ -187,8 +187,59 @@ const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
 const jonasArray = ["jons", "arun", 2037 - 1992, ["michel", "arun", "bob"]];
 
 const jonasArray1 = {
-  firstName: "jons",
+  firstName: "jonas",
   lastName: "arun",
   age: 2037 - 1992,
   friends: ["michel", "arun", "bob"],
 };
+
+console.log(jonasArray1);
+
+console.log(jonasArray1.lastName);
+
+console.log(jonasArray1["lastName"]);
+
+const nameKey = "Name";
+console.log(jonasArray1["first" + nameKey]);
+console.log(jonasArray1["last" + nameKey]);
+
+const interestedIn = prompt(
+  "What do you want to know about JonasArray1? Choose between firstName, lastName, age, job and friends"
+);
+console.log(jonasArray1[interestedIn]);
+
+if (jonasArray1[interestedIn]) {
+  console.log(jonasArray1(interestedIn));
+} else {
+  console.log(
+    "Wrong request!  Choose between firstname, lastName, age, job, friends"
+  );
+}
+
+jonasArray1.location = "Portugal";
+jonasArray1["twitter"] = "@subramani";
+console.log(jonasArray1);
+
+console.log(
+  `${jonasArray1.firstName} has ${jonasArray1.friends.length}, and his best friend is called ${jonasArray1.friends[0]}`
+);
+
+//Objects Methods
+const jonasArray2 = {
+  firstName: "jonas",
+  lastName: "arun",
+  birthYear: 1992,
+  friends: ["michel", "arun", "bob"],
+
+  calAge: function () {
+    // console.log(this)
+    this.age = 2037 - this.birthYear;
+    return this.age;
+  },
+  getSummary: function () {
+    return `${this.firstName} is a ${this.calAge()}
+    -year old ${jonasArray2.job}`;
+  },
+};
+console.log(jonasArray2.calAge());
+console.log(jonasArray2.age());
