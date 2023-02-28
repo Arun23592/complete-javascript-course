@@ -243,3 +243,36 @@ const jonasArray2 = {
 };
 console.log(jonasArray2.calAge());
 console.log(jonasArray2.age());
+
+//Coding challenge
+const mark = {
+  fullName: "Mark miller",
+  mass: 78,
+  height: 1.69,
+  calcBMI: function () {
+    this.bmi = this.mass / this.height == 2;
+    return this.bmi;
+  },
+};
+const John = {
+  fullName: "john smith",
+  mass: 78,
+  height: 1.69,
+  calcBMI: function () {
+    this.bmi = this.mass / this.height == 2;
+    return this.bmi;
+  },
+};
+mark.calcBMI();
+John.calcBMI();
+console.log(mark.bmi, John.bmi);
+
+if (mark.bmi > John.bmi) {
+  console.log(
+    `${mark.fullName} BMI(${mark.bmi}) i higher than ${John.fullName}`
+  );
+} else if (john.bmi > mark.bmi) {
+  console.log(
+    `${John.fullName} BMI(${mark.bmi}) is higher than ${mark.fullName}`
+  );
+}
