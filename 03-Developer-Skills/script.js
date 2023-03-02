@@ -4,4 +4,14 @@
 const x = 23;
 if (x == 23) console.log(23);
 
-console.log();
+
+const measureKelvin = function () {
+  const measurement = {
+    type: "temp",
+    unit: "celsius",,
+    value : prompt('Degree celsius: '),
+  };
+
+  const kelvin = measurement.value + 273;
+  return kelvin;
+};
