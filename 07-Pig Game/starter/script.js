@@ -47,3 +47,12 @@ btnRoll.addEventListener('click', function () {
     player1El.classList.toggle('player--active');
   }
 });
+
+btnHold.addEventListener('click', function () {
+  //1. Add current score
+  scores[activePlayer] += currentScore;
+  // console.log(scores[activePlayer]);
+  document.getElementById(`score--${activePlayer}`).textContent =
+    scores[activePlayer];
+  switchPlayer();
+});
