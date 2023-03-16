@@ -29,7 +29,20 @@ const restaurant = {
   order: function (starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
+
+  orderDelivery: function (starterIndex, mainIndex, time, address) {
+    console.log(
+      `orderReceived${this.starterIndex} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
+    );
+  },
 };
+
+restaurant.orderDelivery({
+  time: '22:30',
+  address: 'Viva del Sole, 21',
+  mainIndex: 2,
+  starterIndex: 2,
+});
 
 const { name, openingHour, categories } = restaurant;
 console.log(name, openingHour, categories);
@@ -46,11 +59,16 @@ const { menu = [], starterMenu: starters = [] } = restaurant;
 console.log(menu, starters);
 
 //Mutating variables
-let a = 111;
-let b = 999;
-const obj = { a: 23, b: 7, c: 14 };
-({ a, b } = obj);
-console.log(a, b);
+let a1 = 111;
+let b1 = 999;
+const obj = { a1: 23, b1: 7, c: 14 };
+({ a1, b1 } = obj);
+console.log(a1, b1);
+
+//Nested objects
+// const {
+//   fri: { opoen },
+// } = { openingHours };
 //destructuring
 const arr = [2, 3, 4];
 const a = arr[0];
@@ -74,11 +92,42 @@ console.log(starter, mainCourse);
 //nested destructuring
 const nested = [2, (4)[(5, 6)]];
 // const [i, j] = nested;
-const [i, , [j, k]] = nested;
-console.log(i, j, k);
+// const [i, , [j, k]] = nested;
+// console.log(i, j, k);
 
 //Default values
 const [p = 1, q = 1, r = 1] = [8, 9];
 console.log(p, q, r);
 
 //Destructuring object
+
+//Spred opoerator
+const arr1 = [7, 8, 9];
+const badNewwArray = [1, 2, arr[0], arr[1], arr[2]];
+console.log(badNewwArray);
+
+const newArray = [1, 2, ...arr1];
+console.log(newArray);
+
+console.log(...newArray);
+console.log(1, 2, 7, 8, 9);
+const newMenu = [...restaurant.mainMenu, 'Gnocci'];
+console.log(newMenu);
+
+//copy array
+const mainMenuCopy = [...restaurant.starterMenu];
+
+//join 2 array
+const menu1 = [...restaurant.starterMenu, ...restaurant.mainMenu];
+console.log(menu1);
+
+//iterables: trings, maps, sets
+const str = 'jonas';
+const letters = [...str, ' ', 's.'];
+console.log(letters);
+console.log(...str);
+
+const ingrediants = [
+  prompt("Let's make pasta! Ingrediants1?"),
+  prompt("Let's make pasta! Ingrediants 2?"),
+];
