@@ -48,8 +48,7 @@ age = 31;
 
 const birthYear = 1992; //const - recommend dto use. Variables declared with the const maintain constant values. const declarations share some similarities with let declarations.
 
-var job = "programmer"; //older way to use before  Es6
-job = "teacher";
+  // types[i] = typeof jonasArray3[i];
 
 // lastName = "schmedtmann"; //Uncaught ReferenceError: Cannot access 'lastName' before initialization
 // console.log(lastName);
