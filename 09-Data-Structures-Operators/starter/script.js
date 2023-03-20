@@ -131,3 +131,27 @@ const ingrediants = [
   prompt("Let's make pasta! Ingrediants1?"),
   prompt("Let's make pasta! Ingrediants 2?"),
 ];
+
+//SPREAD because on RIGHT side of =
+const arr2 = [1, 2, ...[3, 4]];
+
+//REST, because on LEFt SIDE OF =
+const [a5, b5, ...others] = [1, 2, 3, 4, 5];
+console.log(a5, b5, others);
+
+const [Pizza, , Risotto, ...otherFood] = {
+  ...restaurant.mainMenu,
+  ...restaurant.starterMenu,
+};
+console.log(Pizza, Risotto, otherFood);
+
+//objects
+const { sat, ...weekdays } = restaurant.openingHours;
+console.log(weekdays);
+
+//functions
+const add = function (...numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) sum += numbers[i];
+  console.log(sum);
+};
