@@ -139,11 +139,11 @@ const arr2 = [1, 2, ...[3, 4]];
 const [a5, b5, ...others] = [1, 2, 3, 4, 5];
 console.log(a5, b5, others);
 
-const [Pizza, , Risotto, ...otherFood] = {
-  ...restaurant.mainMenu,
-  ...restaurant.starterMenu,
-};
-console.log(Pizza, Risotto, otherFood);
+// const [Pizza, , Risotto, ...otherFood] = {
+//   ...restaurant.mainMenu,
+//   ...restaurant.starterMenu,
+// };
+// console.log(Pizza, Risotto, otherFood);
 
 //objects
 const { sat, ...weekdays } = restaurant.openingHours;
@@ -155,3 +155,12 @@ const add = function (...numbers) {
   for (let i = 0; i < numbers.length; i++) sum += numbers[i];
   console.log(sum);
 };
+
+//Loop Arrays: for-loop
+const menus = [...restaurant.starterMenu, ...restaurant.mainMenu];
+
+for (const item of menu) console.log(item);
+
+for (const [i, el] of menu.entries()) {
+  console.log(`${i}+1, {el}+1`);
+}
