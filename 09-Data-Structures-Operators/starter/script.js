@@ -164,3 +164,57 @@ for (const item of menu) console.log(item);
 for (const [i, el] of menu.entries()) {
   console.log(`${i}+1, {el}+1`);
 }
+
+const restaurant2 = {
+  name: 'Classico Italiano',
+  location: 'Via Angelo Tavanti 23, Firenze, Italy',
+  categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+  starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+  mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+
+  openingHours: {
+    thu: {
+      open: 12,
+      close: 22,
+    },
+    fri: {
+      open: 11,
+      close: 23,
+    },
+    sat: {
+      open: 0, // Open 24 hours
+      close: 24,
+    },
+  },
+  orderPizza(mainIngredient, ...otherIngredient) {
+    console.log(mainIngredient);
+    console.log(otherIngredient);
+  },
+};
+
+//Set
+const orderSets = new Set([
+  'Pizza',
+  'Pasta',
+  'Pizatto',
+  'Pizza',
+  'Pasta',
+  'Pizza',
+]);
+console.log(orderSets);
+console.log(new Set('Adiah'));
+
+console.log(orderSets.size);
+console.log(orderSets.has('Pizatto'));
+console.log(orderSets.has('Kuruma'));
+orderSets.add('kuruma');
+orderSets.add('Pulao');
+orderSets.delete('kuruma');
+console.log(orderSets);
+
+for (const order of orderSets) console.log(order);
+
+//Example
+const staff = ['waiter', 'chef', 'waiter', 'Manager', 'chef', 'waiter'];
+const staffUnique = [...new Set(staff)];
+console.log(staffUnique);
