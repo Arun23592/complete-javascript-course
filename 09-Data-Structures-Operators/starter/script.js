@@ -218,3 +218,33 @@ for (const order of orderSets) console.log(order);
 const staff = ['waiter', 'chef', 'waiter', 'Manager', 'chef', 'waiter'];
 const staffUnique = [...new Set(staff)];
 console.log(staffUnique);
+
+//Map
+const rest = new map();
+rest.set('name', 'Clasico Italino');
+rest.set(1, 'Frerna, Italy');
+console.log(rest.set(2, 'Lisbon, Portugal'));
+
+rest
+.set('categories', ['Italianan', 'Pizzeria', 'Vegeterian', 'Organic']);
+.set('open', 11);
+.set('closed', 23);
+.set(true, 'We are open');
+.set(false, 'We are closed');
+
+
+console.log(rest.get('name'));
+console.log(rest.get(true));
+console.log(rest.get(1));
+
+const time = 8;
+console.log(rest.get(time>rest.get('open')&& time<rest.get('closed')));
+
+console.log(rest.has('categories'));
+rest.delete(2);
+
+rest.set(arr, 'Test');
+console.log(rest);
+console.log(rest.size);
+
+consol.log(rest.get(arr));
