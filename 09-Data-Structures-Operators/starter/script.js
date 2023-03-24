@@ -220,25 +220,23 @@ const staffUnique = [...new Set(staff)];
 console.log(staffUnique);
 
 //Map
-const rest = new map();
+// const rest = new map1();
 rest.set('name', 'Clasico Italino');
 rest.set(1, 'Frerna, Italy');
 console.log(rest.set(2, 'Lisbon, Portugal'));
 
-rest
-.set('categories', ['Italianan', 'Pizzeria', 'Vegeterian', 'Organic']);
-.set('open', 11);
-.set('closed', 23);
-.set(true, 'We are open');
-.set(false, 'We are closed');
-
+rest.set('categories', ['Italianan', 'Pizzeria', 'Vegeterian', 'Organic']);
+// .set('open', 11);
+// .set('closed', 23);
+// .set(true, 'We are open');
+// .set(false, 'We are closed');
 
 console.log(rest.get('name'));
 console.log(rest.get(true));
 console.log(rest.get(1));
 
 const time = 8;
-console.log(rest.get(time>rest.get('open')&& time<rest.get('closed')));
+console.log(rest.get(time > rest.get('open') && time < rest.get('closed')));
 
 console.log(rest.has('categories'));
 rest.delete(2);
@@ -248,3 +246,42 @@ console.log(rest);
 console.log(rest.size);
 
 consol.log(rest.get(arr));
+
+const restaurant3 = {
+  name: 'Classico Italiano',
+  location: 'Via Angelo Tavanti 23, Firenze, Italy',
+  categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+  starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+  mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+
+  openingHours: {
+    thu: {
+      open: 12,
+      close: 22,
+    },
+    fri: {
+      open: 11,
+      close: 23,
+    },
+    sat: {
+      open: 0, // Open 24 hours
+      close: 24,
+    },
+  },
+  orderPizza(mainIngredient, ...otherIngredient) {
+    console.log(mainIngredient);
+    console.log(otherIngredient);
+  },
+};
+
+const question = map([
+  ['question', 'What is the best programaming language in the worlds'],
+  [1, 'C'],
+  [2, 'JavaScript'],
+  [3, 'Python'],
+  ['correct', 3],
+  ['true', 'correct!!'],
+  [false],
+]);
+
+console.log(question);
