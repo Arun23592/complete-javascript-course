@@ -221,19 +221,19 @@ console.log(staffUnique);
 
 //Map
 // const rest = new map1();
-rest.set('name', 'Clasico Italino');
-rest.set(1, 'Frerna, Italy');
-console.log(rest.set(2, 'Lisbon, Portugal'));
+// rest.set(name, 'Clasico Italino');
+// rest.set(1, 'Frerna, Italy');
+// console.log(rest.set(2, 'Lisbon, Portugal'));
 
-rest.set('categories', ['Italianan', 'Pizzeria', 'Vegeterian', 'Organic']);
+// rest.set('categories', ['Italianan', 'Pizzeria', 'Vegeterian', 'Organic']);
 // .set('open', 11);
 // .set('closed', 23);
 // .set(true, 'We are open');
 // .set(false, 'We are closed');
 
-console.log(rest.get('name'));
-console.log(rest.get(true));
-console.log(rest.get(1));
+// console.log(rest.get('name'));
+// console.log(rest.get(true));
+// console.log(rest.get(1));
 
 const time = 8;
 console.log(rest.get(time > rest.get('open') && time < rest.get('closed')));
@@ -280,8 +280,13 @@ const question = map([
   [2, 'JavaScript'],
   [3, 'Python'],
   ['correct', 3],
-  ['true', 'correct!!'],
-  [false],
+  [true, 'correct!!'],
+  [false, 'try  again'],
 ]);
 
 console.log(question);
+
+//convert obj to map
+console.log(Object.entries(openingHours));
+const hoursMap = new Map(Object.entries(openingHours));
+console.log(hoursMap);
