@@ -340,3 +340,11 @@ checkMiddleSeat('23C');
 checkMiddleSeat('3E');
 
 console.log(new String('Jonas'));
+
+const airline2 = 'TAP Air Portugal';
+console.log(airline2.toLowerCase());
+console.log(airline2.toUpperCase());
+
+//fix capitilization in name
+const passenger = 'JoNas';
+const passengerLower = passenger.toLocaleUpperCase;
