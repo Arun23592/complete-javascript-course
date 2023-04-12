@@ -17,3 +17,24 @@ createBooking('LH123');
 createBooking('LH123', 2, 800);
 createBooking('LH123', 2);
 createBooking('LH123', 5);
+
+const flight = 'LH434';
+const arun = {
+  name: 'Arun s',
+  passport: '2324558789',
+};
+
+const checkIn = function (flightNumber, passenger) {
+  flightNumber = 'L999';
+  passenger.name = 'Mr. ' + passenger.name;
+
+  if (passenger.passport === 2324558789) {
+    alert('Checked in');
+  } else {
+    alert('Wrong passport');
+  }
+};
+
+checkIn(flight, arun);
+console.log(flight);
+console.log(arun);
