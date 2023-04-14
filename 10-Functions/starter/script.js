@@ -38,3 +38,14 @@ const checkIn = function (flightNumber, passenger) {
 checkIn(flight, arun);
 console.log(flight);
 console.log(arun);
+
+//IS the same as doing
+const flightNumber = flight;
+const passenger = arun;
+
+const newPassport = function (person) {
+  person.passport = Math.trunc(Math.random() * 1000000000);
+};
+
+newPassport(arun);
+checkIn(flight, arun);
