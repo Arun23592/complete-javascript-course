@@ -49,3 +49,12 @@ const newPassport = function (person) {
 
 newPassport(arun);
 checkIn(flight, arun);
+
+const oneWord = function (str) {
+  return str.replace(/ /g, '').toLowerCase();
+};
+
+const upperFirstWord = function (str) {
+  const [first, ...others] = str.split('');
+  return first.toUpperCase;
+};
