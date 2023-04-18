@@ -58,3 +58,21 @@ const upperFirstWord = function (str) {
   const [first, ...others] = str.split('');
   return first.toUpperCase;
 };
+
+//HigherOrder function
+const transformer = function (str, fn) {
+  console.log(`Original string: ${str}`);
+  console.log(`Transformed string: ${str}`);
+
+  console.log(`Transformed string: ${fn.name}`);
+
+  transformer('Javascript is the best!', upperFirstWord);
+  transformer('Javascript is the best!', oneWord);
+
+  //JS callback all the time
+  const high5 = function () {
+    console.log('hand');
+  };
+  document.body.addEventListener('click', high5);
+  ['jonas', 'Martha', 'Adam'].forEach(high5);
+};
