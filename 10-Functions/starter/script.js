@@ -76,3 +76,20 @@ const transformer = function (str, fn) {
   document.body.addEventListener('click', high5);
   ['jonas', 'Martha', 'Adam'].forEach(high5);
 };
+
+const greet = function (greeting) {
+  return function (name) {
+    console.log(`${greeting} ${name}`);
+  };
+};
+
+const greeterHey = greet('Hey');
+greeterHey('Jonas');
+greeterHey('Arun');
+
+greeterHey('Hello')('Arun');
+
+//Challenge
+
+const greetArt = greeting => name => console.log(`${greeting} ${name}`);
+greet('Hi')('Arun');
