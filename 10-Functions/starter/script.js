@@ -93,3 +93,13 @@ greeterHey('Hello')('Arun');
 
 const greetArt = greeting => name => console.log(`${greeting} ${name}`);
 greet('Hi')('Arun');
+
+const lufthansa = {
+  airline: 'Atlanta',
+  lataCode: LH,
+  Bookings: [],
+
+  book(flightNum, name) {
+    console.log(`${name} booked seat on ${this.airline}`);
+  },
+};
