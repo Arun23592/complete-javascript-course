@@ -100,6 +100,9 @@ const lufthansa = {
   Bookings: [],
 
   book(flightNum, name) {
-    console.log(`${name} booked seat on ${this.airline}`);
+    console.log(
+      `${name} booked seat on ${this.airline} flight${this.lataCode}${flightNum}`
+    );
+    this.bookings.push({ flight: `${this.latacode} {flightNum}`, name });
   },
 };
