@@ -106,3 +106,8 @@ const lufthansa = {
     this.bookings.push({ flight: `${this.latacode} {flightNum}`, name });
   },
 };
+const movements = [200, 450, -400, 3000, -650, -130];
+
+for (const movement of movement) {
+  console.log('you deposited'`${movement}`);
+}
