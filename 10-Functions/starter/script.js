@@ -109,5 +109,7 @@ const lufthansa = {
 const movements = [200, 450, -400, 3000, -650, -130];
 
 for (const movement of movement) {
-  console.log('you deposited'`${movement}`);
+  console.log(`you deposited' ${movement}`);
+}else {
+  console.log(`you withdraw'  ${Math.abs(movement)}`);
 }
